@@ -12,7 +12,7 @@
 @protocol JhiCollWebPickDelegate <NSObject>
 
 @optional
-- (void)passWebSiteLink:(NSString *)link;
+- (void)passWebSiteLink:(NSString *)link withTitle:(NSString *)title;
 
 @end
 

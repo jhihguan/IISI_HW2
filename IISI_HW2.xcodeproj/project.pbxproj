@@ -19,6 +19,7 @@
 		6A2E8E2217C8D71000E117CB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E8E2017C8D71000E117CB /* MainStoryboard.storyboard */; };
 		6A2E8E2517C8D71000E117CB /* JhiCollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E8E2417C8D71000E117CB /* JhiCollViewController.m */; };
 		6A2E8E2D17C8E19C00E117CB /* JhiCollWebPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E8E2C17C8E19C00E117CB /* JhiCollWebPickViewController.m */; };
+		6A2E8E3017C90C4200E117CB /* JhiCollHistorySync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E8E2F17C90C4200E117CB /* JhiCollHistorySync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		6A2E8E2417C8D71000E117CB /* JhiCollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhiCollViewController.m; sourceTree = "<group>"; };
 		6A2E8E2B17C8E19C00E117CB /* JhiCollWebPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhiCollWebPickViewController.h; sourceTree = "<group>"; };
 		6A2E8E2C17C8E19C00E117CB /* JhiCollWebPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhiCollWebPickViewController.m; sourceTree = "<group>"; };
+		6A2E8E2E17C90C4200E117CB /* JhiCollHistorySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JhiCollHistorySync.h; path = model/JhiCollHistorySync.h; sourceTree = "<group>"; };
+		6A2E8E2F17C90C4200E117CB /* JhiCollHistorySync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JhiCollHistorySync.m; path = model/JhiCollHistorySync.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 				6A2E8E2B17C8E19C00E117CB /* JhiCollWebPickViewController.h */,
 				6A2E8E2C17C8E19C00E117CB /* JhiCollWebPickViewController.m */,
 				6A2E8E0F17C8D71000E117CB /* Supporting Files */,
+				6A2E8E3117C90C4700E117CB /* Model */,
 			);
 			path = IISI_HW2;
 			sourceTree = "<group>";
@@ -110,6 +114,15 @@
 				6A2E8E1E17C8D71000E117CB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A2E8E3117C90C4700E117CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A2E8E2E17C90C4200E117CB /* JhiCollHistorySync.h */,
+				6A2E8E2F17C90C4200E117CB /* JhiCollHistorySync.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +196,7 @@
 				6A2E8E1917C8D71000E117CB /* JhiCollAppDelegate.m in Sources */,
 				6A2E8E2517C8D71000E117CB /* JhiCollViewController.m in Sources */,
 				6A2E8E2D17C8E19C00E117CB /* JhiCollWebPickViewController.m in Sources */,
+				6A2E8E3017C90C4200E117CB /* JhiCollHistorySync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

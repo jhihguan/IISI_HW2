@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="url" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-0h-weh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="www.google.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-0h-weh">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EaV-kT-Kcy"/>
                                 </constraints>
@@ -44,21 +44,58 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-5x-L4S">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="rhY-CE-nCN"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="LinkCell" textLabel="Ye7-YU-RNS" detailTextLabel="OMU-8l-75A" style="IBUITableViewCellStyleSubtitle" id="7bd-un-EdN">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye7-YU-RNS">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMU-8l-75A">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="cv5-Lf-cso"/>
+                                    <outlet property="delegate" destination="2" id="4Cc-YQ-9N6"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qyM-5x-L4S" firstAttribute="top" secondItem="4Zj-l1-owf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7CV-bF-ggj"/>
                             <constraint firstItem="yyT-0h-weh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DQL-Tj-FYU"/>
                             <constraint firstItem="BXC-F3-GMj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="65" id="F3d-Fs-gZj"/>
                             <constraint firstItem="4Zj-l1-owf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JbT-mO-KEf"/>
                             <constraint firstItem="4Zj-l1-owf" firstAttribute="top" secondItem="yyT-0h-weh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LXN-kr-DLo"/>
-                            <constraint firstItem="yyT-0h-weh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="62" id="YEL-sI-Zkr"/>
                             <constraint firstItem="BXC-F3-GMj" firstAttribute="leading" secondItem="yyT-0h-weh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ZQT-bS-xFI"/>
+                            <constraint firstAttribute="bottom" secondItem="qyM-5x-L4S" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="a4g-8b-u4K"/>
                             <constraint firstAttribute="trailing" secondItem="4Zj-l1-owf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="asS-0x-uAr"/>
+                            <constraint firstAttribute="trailing" secondItem="qyM-5x-L4S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="c51-nz-ajm"/>
+                            <constraint firstItem="qyM-5x-L4S" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="p1t-Pg-IpI"/>
                             <constraint firstAttribute="trailing" secondItem="BXC-F3-GMj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s81-61-cPP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Just a Test" id="5eV-uf-Ie8"/>
                     <connections>
+                        <outlet property="histTableView" destination="qyM-5x-L4S" id="xMB-u0-6mW"/>
                         <outlet property="urlTextField" destination="yyT-0h-weh" id="QbB-nN-FNW"/>
                         <outlet property="urlTitleLabel" destination="4Zj-l1-owf" id="9Fh-dm-euO"/>
                     </connections>
@@ -124,6 +161,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JhiCollViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goURL:"/>
+                <relationship kind="outlet" name="histTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="urlTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="urlTitleLabel" candidateClass="UILabel"/>
             </relationships>

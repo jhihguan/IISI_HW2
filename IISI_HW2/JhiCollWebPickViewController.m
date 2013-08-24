@@ -10,13 +10,12 @@
 
 @interface JhiCollWebPickViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
 @end
 
 @implementation JhiCollWebPickViewController
 
 - (void)viewWillDisappear:(BOOL)animated{
-    [_delegate passWebSiteLink:self.link];
+    [_delegate passWebSiteLink:self.link withTitle:[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"]];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
