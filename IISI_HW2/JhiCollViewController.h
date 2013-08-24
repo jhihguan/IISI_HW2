@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface JhiCollViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *urlTextField;
+@property (weak, nonatomic) IBOutlet UILabel *urlTitleLabel;
 
 @end
