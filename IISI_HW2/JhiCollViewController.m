@@ -21,13 +21,13 @@
 #define HIST_LINK_ID @"LinkCell"
 
 - (IBAction)goURL:(id)sender {
-    [self performSegueWithIdentifier:@"goURL" sender:sender];
+//    [self performSegueWithIdentifier:@"goURL" sender:sender];
     
 }
 
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    
-}
+//- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+//    
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
      if ([segue.identifier isEqualToString:@"goURL"]) {
@@ -39,7 +39,7 @@
          }
          [webpick setLink:link];
          [webpick setDelegate:self];
-    }
+     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -48,6 +48,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [[self.histSync historys] count];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    JhiCollWebPickViewController *webpick = [[JhiCollWebPickViewController alloc] init];
+//    
+//    NSString *link = self.urlTextField.text;
+//    if ([link rangeOfString:@"http://"].location == NSNotFound) {
+//        link = [@"http://" stringByAppendingString:link];
+//    }
+//    [webpick setLink:link];
+//    [webpick setDelegate:self];
+//    [[self navigationController] pushViewController:webpick animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

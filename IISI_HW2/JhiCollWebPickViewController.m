@@ -13,6 +13,11 @@
 @end
 
 @implementation JhiCollWebPickViewController
+- (IBAction)closeWindow {
+    [self dismissViewControllerAnimated:YES completion:^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }];
+}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [_delegate passWebSiteLink:self.link withTitle:[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"]];
@@ -21,6 +26,8 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
         self.link = request.URL.absoluteString;
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self dismissViewControllerAnimated:YES completion:^{}];
     }
     return YES;
 }
